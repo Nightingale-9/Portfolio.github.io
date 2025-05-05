@@ -2,24 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ethan Naidoo | Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethan Naidoo | Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Ethan</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
+  <!-- Hero Section -->
   <section class="hero">
-    <h2>Hi, I'm Ethan Naidoo</h2>
-    <p>Turning ideas into scalable code</p>
+    <div class="overlay">
+      <h1 class="typewriter glow">Hi, I'm Ethan Naidoo<span class="cursor">|</span></h1>
+      <p class="typewriter delay glow">Turning ideas into scalable code<span class="cursor">|</span></p>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate developer with a love for building modern web applications. Skilled in HTML, CSS, JavaScript, React, and Node.js.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <video src="videos/project1.mp4" controls></video>
+        <h3>Project One</h3>
+        <p>React-based task manager with Firebase backend.</p>
+        <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <video src="videos/project2.mp4" controls></video>
+        <h3>Project Two</h3>
+        <p>Portfolio site built with HTML/CSS and deployed on GitHub Pages.</p>
+        <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
 </body>
