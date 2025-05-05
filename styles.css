@@ -1,73 +1,195 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-}
 
 body {
-  background-image: url('images/profile.jpg'); /* Replace with your actual image */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1rem 2rem;
+/* Hero Section */
+.hero {
+  background: url('images/profile.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  justify-content: center;
+  text-align: center;
 }
 
-header h1 {
-  font-size: 1.5rem;
-  color: #00ffff;
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff;
 }
 
-nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: white;
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.hero .tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Typewriter Effect */
+.typewriter,
+.typewriter.delay {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  width: 0;
+}
+
+.typewriter {
+  animation: typing 2.5s steps(30, end) forwards;
+}
+
+.typewriter.delay {
+  animation: typing 3s steps(40, end) 2.8s forwards;
+}
+
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.8s infinite;
+  color: #00bfff;
   font-weight: bold;
 }
 
-.hero {
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Glow Effect */
+.glow {
+  color: #fff;
+  text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 20px #00bfff;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card video {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-section {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-section form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  gap: 15px;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  text-shadow: 0 0 10px cyan;
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #aad;
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
-  }
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  nav a {
-    margin-left: 1rem;
-  }
+button:hover {
+  background-color: #0056b3;
 }
