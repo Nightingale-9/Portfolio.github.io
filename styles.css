@@ -201,3 +201,49 @@ background: url('images/Background2.webp') no-repeat center center/cover;
   background-color: #009fd9;
   box-shadow: 0 0 12px #00bfff, 0 0 24px #00bfff;
 }
+
+/* === MOBILE OPTIMIZATIONS === */
+@media (max-width: 600px) {
+
+  .hero {
+    padding-top: 180px;
+  }
+
+  .hero .overlay h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero .overlay p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 40px 16px;
+  }
+
+  .contact-section .email-button {
+    padding: 14px 20px;
+    font-size: 1.05rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 16px 0;
+  }
+}
