@@ -55,7 +55,7 @@ body {
   background: none;
   overflow: hidden;
   text-align: center;
-  padding-top: 350px; /* Adjust for navbar height + spacing */
+  padding-top: 250px; /* Adjust for navbar height + spacing */
 }
 
 .hero::before {
@@ -85,15 +85,15 @@ body {
 .hero .overlay h1 {
   font-size: 3rem;
   margin: 0;
-  color: #00bfff;
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
 }
 
 .hero .overlay p {
   font-size: 1.3rem;
   margin-top: 10px;
-  color: #a0dfff;
-  text-shadow: 0 0 6px #00bfff;
+  color: white;
+  text-shadow: 0 0 6px white;
 }
 
 /* === TYPEWRITER EFFECT === */
