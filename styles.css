@@ -26,8 +26,8 @@ body {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('images/hud-background.png') no-repeat center center/cover;
-  filter: brightness(0.7); /* less dim = more visible */
+  background: url('images/Transparent.webp') no-repeat center center/cover;
+  filter: brightness(1.5); /* less dim = more visible */
   z-index: 0;
 }
 
