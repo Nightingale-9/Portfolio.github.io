@@ -159,45 +159,17 @@ body {
 }
 
 /* Contact Form */
-.contact-section {
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  max-width: 600px;
-  margin: auto;
-}
-
-.contact-section form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-input:focus, textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
+.contact-section button {
+  background-color: #00bcd4; /* cyan */
+  color: white;
+  padding: 12px 24px;
   border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #0056b3;
+.contact-section button:hover {
+  background-color: #0097a7; /* darker cyan on hover */
 }
