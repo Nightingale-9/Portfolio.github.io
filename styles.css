@@ -50,11 +50,12 @@ body {
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align to top */
   justify-content: center;
   background: none;
   overflow: hidden;
   text-align: center;
+  padding-top: 140px; /* Adjust for navbar height + spacing */
 }
 
 .hero::before {
@@ -62,7 +63,7 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: url('images/background 2.webp') no-repeat center center/cover;
-  filter: brightness(0.6) blur(1px); /* softened code background */
+  filter: brightness(0.6) blur(1px);
   z-index: 0;
 }
 
@@ -77,8 +78,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  height: auto; /* Let height grow with content */
 }
 
 .hero .overlay h1 {
