@@ -92,8 +92,8 @@ background: url('images/Background2.webp') no-repeat center center/cover;
 .hero .overlay p {
   font-size: 1.3rem;
   margin-top: 10px;
-  color: white;
-  text-shadow: 0 0 6px white;
+  color: #00bfff;
+  text-shadow: 0 0 6px #00bfff;
 }
 
 /* === TYPEWRITER EFFECT === */
