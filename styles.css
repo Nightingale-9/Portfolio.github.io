@@ -55,7 +55,7 @@ body {
   background: none;
   overflow: hidden;
   text-align: center;
-  padding-top: 250px; /* Adjust for navbar height + spacing */
+  padding-top: 400px; /* Adjust for navbar height + spacing */
 }
 
 .hero::before {
