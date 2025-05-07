@@ -85,8 +85,8 @@ background: url('images/Background2.webp') no-repeat center center/cover;
 .hero .overlay h1 {
   font-size: 3rem;
   margin: 0;
-  color: white;
-  text-shadow: 0 0 10px white, 0 0 20px white;
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
 }
 
 .hero .overlay p {
