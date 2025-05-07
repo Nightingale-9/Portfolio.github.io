@@ -12,32 +12,35 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url('images/background.webp') no-repeat center center/cover;
-  height: 100vh;
   position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: none; /* Remove direct background image here */
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('images/background.webp') no-repeat center center/cover;
+  filter: brightness(0.3); /* dim the image */
+  z-index: 0;
 }
 
 .hero .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 400px 400px 400px 400px; /* ⬅ increased top padding */
-  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.55); /* semi-transparent dark overlay */
+  padding: 100px 40px;
+  border-radius: 12px;
   color: #fff;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-.hero .tagline {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-top: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.3); /* optional glowing border effect */
 }
 
 /* Typewriter Effect */
