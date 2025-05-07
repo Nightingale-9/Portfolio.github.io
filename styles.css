@@ -5,8 +5,8 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: #000; /* fallback if image fails */
+  color: #fff;
   scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: none; /* Remove direct background image here */
+  background: none;
   overflow: hidden;
 }
 
@@ -26,18 +26,21 @@ body {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('images/Transparent.webp') no-repeat center center/cover;
+  background: url('images/hud-background.png') no-repeat center center/cover;
+  filter: brightness(0.7); /* less dim = more visible */
   z-index: 0;
 }
 
 .hero .overlay {
   position: relative;
   z-index: 1;
+  background: none; /* remove dark box */
   padding: 100px 40px;
   border-radius: 12px;
   color: #fff;
   max-width: 80%;
   margin: 0 auto;
+  box-shadow: none; /* remove glow if desired */
 }
 
 /* Typewriter Effect */
@@ -158,11 +161,10 @@ body {
   margin-bottom: 10px;
 }
 
-/* Contact Form */
 /* Contact Form Button - Updated for glowing futuristic style */
 .contact-section button,
 .contact-section .email-button {
-  background-color: #00bfff; /* bright cyan */
+  background-color: #00bfff;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -178,6 +180,6 @@ body {
 
 .contact-section button:hover,
 .contact-section .email-button:hover {
-  background-color: #009fd9; /* slightly darker on hover */
+  background-color: #009fd9;
   box-shadow: 0 0 12px #00bfff, 0 0 24px #00bfff;
 }
